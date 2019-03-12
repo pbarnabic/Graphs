@@ -23,8 +23,27 @@ test_vertex_d.add_new_edge(test_vertex_e)
 test_vertex_d.add_new_edge(test_vertex_f)
 test_vertex_f.add_new_edge(test_vertex_g)
 
+
+test_graph_2 = AdjacencyListGraph.new
+
+test_vertex_2_a = test_graph_2.add_vertex("A")
+test_vertex_2_b = test_graph_2.add_vertex("B")
+test_vertex_2_c = test_graph_2.add_vertex("C")
+test_vertex_2_d = test_graph_2.add_vertex("D")
+test_vertex_2_e = test_graph_2.add_vertex("E")
+
+test_vertex_2_a.add_new_edge(test_vertex_2_b)
+test_vertex_2_a.add_new_edge(test_vertex_2_c)
+test_vertex_2_b.add_new_edge(test_vertex_2_e)
+test_vertex_2_c.add_new_edge(test_vertex_2_d)
+test_vertex_2_d.add_new_edge(test_vertex_2_e)
+
+
 puts "Depth_First_Search"
 depth_first_search(test_vertex_a)
+
+puts "Broken Depth First Search"
+depth_first_search(test_vertex_2_a)
 
 puts "Breadth_First_Search"
 breadth_first_search(test_vertex_a)

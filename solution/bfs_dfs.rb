@@ -4,6 +4,7 @@
 def depth_first_search(start_vertex,visited=Hash.new(false))
   p "Visited: " + start_vertex.data.to_s; visited[start_vertex.object_id] = true
   start_vertex.edges.each do |edge|
+    puts visited.object_id
     depth_first_search(edge.end_vertex,visited) unless visited[edge.end_vertex.object_id]
   end
 end
