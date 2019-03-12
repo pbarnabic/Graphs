@@ -53,18 +53,18 @@ dijkstra_test_vertex_g.add_new_edge(dijkstra_test_vertex_f,2)
 test_dijkstra = Dijkstra.new(dijkstra_test_vertex_a)
 
 puts "Dykstra Shortest Path: "
-p test_dijkstra.shortest_path(dijkstra_test_vertex_a)
+p test_dijkstra.shortest_path(dijkstra_test_vertex_f)
 puts "Dykstra Shortest Path Distance: "
 p test_dijkstra.shortest_path_distance(dijkstra_test_vertex_f)
 
 
 top_sort_test_graph = AdjacencyListGraph.new
 
-top_sort_test_vertex_a = top_sort_test_graph.add_vertex("Get Tobacco")
-top_sort_test_vertex_b = top_sort_test_graph.add_vertex("Break up the Tobacco")
-top_sort_test_vertex_c = top_sort_test_graph.add_vertex("Roll a Filter")
-top_sort_test_vertex_d = top_sort_test_graph.add_vertex("Roll it up")
-top_sort_test_vertex_e = top_sort_test_graph.add_vertex("Set it on fire")
+top_sort_test_vertex_a = top_sort_test_graph.add_vertex("A")
+top_sort_test_vertex_b = top_sort_test_graph.add_vertex("B")
+top_sort_test_vertex_c = top_sort_test_graph.add_vertex("C")
+top_sort_test_vertex_d = top_sort_test_graph.add_vertex("D")
+top_sort_test_vertex_e = top_sort_test_graph.add_vertex("E")
 
 top_sort_test_vertex_a.add_new_edge(top_sort_test_vertex_b)
 top_sort_test_vertex_a.add_new_edge(top_sort_test_vertex_c)
