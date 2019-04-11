@@ -15,7 +15,14 @@ class TopologicalSort
   def execute
     n = self.graph.vertices.count - 1
     until self.sorted_array.length == self.sorted_array.compact.length
-      vertex = self.graph.vertices[self.sorted_array.find_index(nil)]
+      vertex = nil
+      self.graph.vertices.each do |vert|
+        puts vert.object_id
+        if self.visited[vert.object_id] == false
+          vertex = vert
+          break
+        end
+      end
       n = self.dfs_helper(vertex, n)
     end
   end
