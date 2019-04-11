@@ -17,7 +17,6 @@ class TopologicalSort
     until self.sorted_array.length == self.sorted_array.compact.length
       vertex = nil
       self.graph.vertices.each do |vert|
-        puts vert.object_id
         if self.visited[vert.object_id] == false
           vertex = vert
           break
